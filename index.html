@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#eaf3ff">
+<title>WHITE PANEL | پنل شخصی</title>
+<style>
+:root{--blue:#2879d8;--ink:#17395d;--muted:#66809b;--line:#c8dcf2;--card:rgba(255,255,255,.78)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Tahoma,Arial,sans-serif;color:var(--ink);background:radial-gradient(ellipse at 50% 0%,#c9e0ff 0%,#e8f2ff 48%,#f5f9ff 100%);padding:26px 14px 40px}
+.wrap{max-width:720px;margin:auto}
+header{text-align:center;padding:20px 10px 26px}
+.logo{font-weight:900;letter-spacing:8px;font-size:clamp(30px,7vw,48px);color:#438ee8}
+.sub{letter-spacing:7px;color:#6699d3;font-weight:700;margin-top:4px}
+.tag{display:inline-block;margin-top:18px;padding:8px 16px;border:1px solid #c9def5;border-radius:30px;background:#ffffff80;color:#4d6f91;font-size:13px}
+.panel{background:var(--card);border:1px solid #c5d9ef;border-radius:28px;padding:22px;margin:14px 0;box-shadow:0 12px 34px #6c9bc51a;backdrop-filter:blur(12px)}
+h2{font-size:19px;margin:0 0 16px}
+.hero{text-align:center;padding:28px 18px}
+.clock{font-size:13px;color:var(--muted)}
+.big{font-size:28px;color:var(--blue);font-weight:900;margin:10px 0}
+.stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.stat{background:#fff;border-radius:20px;padding:15px 24px;min-width:115px;box-shadow:0 5px 16px #628db51a}
+.stat b{display:block;color:var(--blue);font-size:23px;margin-bottom:7px}
+.stat span{font-size:12px;color:var(--muted)}
+.config{border:1px solid #d7e5f5;border-radius:18px;padding:15px;margin:12px 0;background:#fff}
+.config-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+.badge{font-size:11px;background:#eaf4ff;color:#347bc5;padding:6px 10px;border-radius:20px}
+.config-text{direction:ltr;text-align:left;overflow-wrap:anywhere;white-space:pre-wrap;background:#f3f7fc;padding:12px;border-radius:12px;color:#34536f;font-size:12px;max-height:100px;overflow:auto}
+button,.btn{border:0;border-radius:12px;padding:11px 16px;background:var(--blue);color:white;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block;font-size:13px}
+.empty{text-align:center;color:var(--muted);padding:24px 10px;line-height:2}
+.links{display:flex;gap:12px;flex-wrap:wrap}
+.links a{flex:1;text-align:center;min-width:180px;padding:15px}
+footer{text-align:center;color:#7890a8;font-size:12px;padding:18px}
+.note{font-size:12px;line-height:1.9;color:var(--muted);margin-top:12px}
+@media(max-width:420px){.panel{padding:18px}.stat{min-width:95px;padding:13px 15px}.links{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="logo">WHITE</div><div class="sub">P A N E L</div>
+  <div class="tag">پنل شخصی نمایش کانفیگ</div>
+</header>
+
+<section class="panel hero">
+  <div class="clock">وضعیت پنل</div>
+  <div class="big">خوش آمدید</div>
+  <div class="clock">کانفیگ‌های شما در این صفحه نمایش داده می‌شوند.</div>
+  <div class="stats">
+    <div class="stat"><b id="count">۰</b><span>تعداد کانفیگ‌ها</span></div>
+    <div class="stat"><b>شخصی</b><span>نوع پنل</span></div>
+    <div class="stat"><b>آنلاین</b><span>وضعیت صفحه</span></div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>🔑 کانفیگ‌های من</h2>
+  <div id="configs"></div>
+  <div class="note">برای اضافه‌کردن کانفیگ، فایل index.html را ویرایش کنید و اطلاعات را در آرایه CONFIGS داخل کد قرار دهید. کانفیگ واقعی را فقط در صورتی منتشر کنید که دسترسی عمومی به آن مشکلی نداشته باشد.</div>
+</section>
+
+<section class="panel">
+  <h2>ما را دنبال کنید</h2>
+  <div class="links">
+    <a class="btn" href="https://t.me/O01lk" target="_blank" rel="noopener">پشتیبانی تلگرام</a>
+  </div>
+</section>
+
+<footer>
+  WHITE PANEL · Personal Edition
+</footer>
+</div>
+<script>
+// کانفیگ‌ها را اینجا اضافه کنید. نمونه:
+// { name: "کانفیگ اول", value: "vless://....", expiry: "۱۴۰۵/۱۲/۳۰" }
+const CONFIGS = [
+  { name: "Nazanin.2", value: 'vless://d0d277a3-be9f-47f1-afbd-5b09b64f6311@xray1-direct-mci1-fs-ce.freesocks.work:443?security=reality&encryption=none&pbk=7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=dl.google.com#Nazanin.2', expiry: "" }
+];
+
+const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+document.getElementById("count").textContent = fa(CONFIGS.length);
+const root = document.getElementById("configs");
+if (!CONFIGS.length) {
+  root.innerHTML = '<div class="empty">هنوز کانفیگی اضافه نشده است.<br>پس از افزودن کانفیگ، اینجا نمایش داده می‌شود.</div>';
+} else {
+  CONFIGS.forEach((item, i) => {
+    const box = document.createElement("div");
+    box.className = "config";
+    const head = document.createElement("div"); head.className = "config-head";
+    const title = document.createElement("strong"); title.textContent = item.name || `کانفیگ ${fa(i+1)}`;
+    const badge = document.createElement("span"); badge.className = "badge"; badge.textContent = item.expiry ? `انقضا: ${item.expiry}` : "فعال";
+    head.append(title, badge);
+    const value = document.createElement("div"); value.className = "config-text"; value.textContent = item.value || "";
+    const copy = document.createElement("button"); copy.textContent = "کپی کانفیگ";
+    copy.addEventListener("click", async () => {
+      try { await navigator.clipboard.writeText(item.value || ""); copy.textContent = "کپی شد ✓"; }
+      catch(e) { copy.textContent = "کپی انجام نشد"; }
+      setTimeout(()=>copy.textContent="کپی کانفیگ",1600);
+    });
+    box.append(head, value, copy); root.append(box);
+  });
+}
+</script>
+</body>
+</html>
