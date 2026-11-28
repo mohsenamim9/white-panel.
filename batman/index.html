@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html lang="fa" dir="rtl">  
+<head>  
+<meta charset="utf-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<meta name="theme-color" content="#eaf3ff">  
+<title>BATMAN PANEL | پنل شخصی</title>  
+<style>  
+:root{--gold:#f5c542;--ink:#f3f3f3;--muted:#a9adb5;--line:#343943;--card:rgba(22,25,31,.94)}  
+*{box-sizing:border-box}  
+body{margin:0;min-height:100vh;font-family:Tahoma,Arial,sans-serif;color:var(--ink);background:radial-gradient(ellipse at 50% 0%,#343943 0%,#171a20 42%,#090a0d 100%);padding:24px 14px 40px}  
+.wrap{max-width:720px;margin:auto}  
+.top-phrase{display:block;width:fit-content;margin:0 auto 10px;padding:10px 22px;border:2px solid #c94a4a;border-radius:14px;background:rgba(166,90,90,.12);text-align:center;font-size:24px;font-weight:900;letter-spacing:.2px;color:#ff8a8a;box-shadow:0 6px 20px rgba(0,0,0,.35)}  
+header{text-align:center;padding:24px 10px 22px}  
+.batmark{width:88px;height:56px;margin:0 auto 12px;display:block;filter:drop-shadow(0 0 12px #f5c54255)}  
+.logo{font-weight:1000;letter-spacing:5px;font-size:clamp(34px,8vw,52px);color:var(--gold);text-shadow:0 3px 0 #755b13,0 0 22px #f5c54233}  
+.sub{letter-spacing:8px;color:#d4d7dc;font-weight:800;margin-top:3px}  
+.tag{display:inline-block;margin-top:16px;padding:8px 16px;border:1px solid #6b5922;border-radius:30px;background:#f5c54212;color:#f5d875;font-size:13px}  
+.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;margin:14px 0;box-shadow:0 14px 38px #0008;backdrop-filter:blur(12px)}  
+h2{font-size:19px;margin:0 0 16px;color:var(--gold)}  
+.hero{text-align:center;padding:28px 18px;border-color:#756020}  
+.clock{font-size:13px;color:var(--muted)}  
+.big{font-size:28px;color:var(--gold);font-weight:900;margin:10px 0}  
+.stats{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}  
+.stat{background:#101318;border:1px solid #333944;border-radius:17px;padding:15px 24px;min-width:115px}  
+.stat b{display:block;color:var(--gold);font-size:23px;margin-bottom:7px}.stat span{font-size:12px;color:var(--muted)}  
+.config{border:1px solid #3b414c;border-radius:16px;padding:15px;margin:12px 0;background:#111419}  
+.config-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}  
+.badge{font-size:11px;background:#403516;color:#f7d96c;padding:6px 10px;border-radius:20px}  
+.config-text{direction:ltr;text-align:left;overflow-wrap:anywhere;white-space:pre-wrap;background:#090b0f;border:1px solid #2d333d;padding:12px;border-radius:12px;color:#d9dde4;font-size:12px;max-height:100px;overflow:auto}  
+button,.btn{border:0;border-radius:11px;padding:11px 16px;background:var(--gold);color:#171717;font-weight:900;cursor:pointer;text-decoration:none;display:inline-block;font-size:13px}  
+.empty{text-align:center;color:var(--muted);padding:24px 10px;line-height:2}  
+.links{display:flex;gap:12px;flex-wrap:wrap}.links a{flex:1;text-align:center;min-width:180px;padding:15px}  
+.note{font-size:12px;line-height:1.9;color:var(--muted);margin-top:12px}  
+footer{text-align:center;color:#8c929c;font-size:12px;padding:18px}  
+.mini-phrase{display:inline-block;margin-top:8px;font-size:10px;letter-spacing:.2px;color:#8d4545;opacity:.8}  
+@media(max-width:420px){.top-phrase{font-size:19px;padding:8px 16px}.panel{padding:18px}.stat{min-width:95px;padding:13px 15px}.links{flex-direction:column}}  
+</style>  
+</head>  
+<body>  
+<div class="wrap">  
+<div class="top-phrase">کیرم توی خامنه‌ای</div>  
+<header>  
+  <svg class="batmark" viewBox="0 0 120 72" aria-label="Bat emblem" role="img"><path fill="#f5c542" d="M60 14 49 27 35 20 29 34 8 27 17 48 34 43 43 58 60 49 77 58 86 43 103 48 112 27 91 34 85 20 71 27Z"/></svg>  
+  <div class="logo">BATMAN</div><div class="sub">P A N E L</div>  
+  <div class="tag">پنل شخصی نمایش کانفیگ</div>  
+</header>  <section class="panel hero">  
+  <div class="clock">وضعیت پنل</div>  
+  <div class="big">خوش آمدید</div>  
+  <div class="clock">کانفیگ‌های شما در این صفحه نمایش داده می‌شوند.</div>  
+  <div class="stats">  
+    <div class="stat"><b id="count">۰</b><span>تعداد کانفیگ‌ها</span></div>  
+    <div class="stat"><b>شخصی</b><span>نوع پنل</span></div>  
+    <div class="stat"><b>آنلاین</b><span>وضعیت صفحه</span></div>  
+  </div>  
+</section>  <section class="panel">  
+  <h2>ما را دنبال کنید</h2>  
+  <div class="links">  
+    <a class="btn" href="https://t.me/O01lk" target="_blank" rel="noopener">بهم پیام بده!</a>  
+  </div>  
+</section>  <section class="panel">  
+  <h2>🔑 کانفیگ‌های من</h2>  
+  <div id="configs"></div>  
+  <div class="note">برای اضافه‌کردن کانفیگ، فایل index.html را ویرایش کنید و اطلاعات را در آرایه CONFIGS داخل کد قرار دهید. کانفیگ واقعی را فقط در صورتی منتشر کنید که دسترسی عمومی به آن مشکلی نداشته باشد.</div>  
+</section>  <footer>  
+  BATMAN PANEL · Personal Edition<br><span class="mini-phrase">کیرم توی خامنه‌ای</span>  
+</footer>  
+</div>  
+<script>  
+// کانفیگ‌ها را اینجا اضافه کنید. نمونه:  
+// { name: "کانفیگ اول", value: "vless://....", expiry: "۱۴۰۵/۱۲/۳۰" }  
+const CONFIGS = [  
+  { name: "حذف ایران🦦", value: 'vless://c581074c-7ec2-4b62-867d-0c6e9858acb9@xray1-direct-mci1-fs-ce.freesocks.work:443?security=reality&encryption=none&pbk=7j3hmlHrEDk3Kjx-dFG3E3jf0c6PZF45trIPFsuKWmI&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=dl.google.com#%D8%AD%D8%B0%D9%81+%D8%A7%DB%8C%D8%B1%D8%A7%D9%86', expiry: "" }  
+];  const fa = n => String(n).replace(/\d/g, d => "۰۱۲۳۴۵۶۷۸۹"[d]);
+document.getElementById("count").textContent = fa(CONFIGS.length);
+const root = document.getElementById("configs");
+if (!CONFIGS.length) {
+root.innerHTML = '<div class="empty">هنوز کانفیگی اضافه نشده است.<br>پس از افزودن کانفیگ، اینجا نمایش داده می‌شود.</div>';
+} else {
+CONFIGS.forEach((item, i) => {
+const box = document.createElement("div");
+box.className = "config";
+const head = document.createElement("div"); head.className = "config-head";
+const title = document.createElement("strong"); title.textContent = item.name || کانفیگ ${fa(i+1)};
+const badge = document.createElement("span"); badge.className = "badge"; badge.textContent = item.expiry ? انقضا: ${item.expiry} : "فعال";
+head.append(title, badge);
+const value = document.createElement("div"); value.className = "config-text"; value.textContent = item.value || "";
+const copy = document.createElement("button"); copy.textContent = "کپی کانفیگ";
+copy.addEventListener("click", async () => {
+try { await navigator.clipboard.writeText(item.value || ""); copy.textContent = "کپی شد ✓"; }
+catch(e) { copy.textContent = "کپی انجام نشد"; }
+setTimeout(()=>copy.textContent="کپی کانفیگ",1600);
+});
+box.append(head, value, copy); root.append(box);
+});
+}
+</script>
+
+</body>  
+</html>
